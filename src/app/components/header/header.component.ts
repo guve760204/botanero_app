@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { CartaService } from '../../services/carta.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,8 @@ import { Component, signal } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  cartaService = inject(CartaService)
+
   navItems = signal([
     {name:'Botanas', link:'#botanas'}, 
     {name:'Promociones', link:'#promociones'}, 
@@ -16,5 +19,9 @@ export class HeaderComponent {
 
   getInfo(){
     window.open("https://wa.me/524442038808?text=Hola,%20quisiera%20más%20información%20sobre%20el%20botanero", '_blank')
+  }
+
+  changeCarta(){
+    this.cartaService.carta.set(false)
   }
 }
