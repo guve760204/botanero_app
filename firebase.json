@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/botanero_app",
+    "public": "dist/botanero_app/browser",
     "ignore": [
       "firebase.json",
       "**/.*",
