@@ -10,7 +10,7 @@ import { CartaService } from '../../services/carta.service';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  
+
   private cartaService = inject(CartaService)
 
   getInfo(){
@@ -18,6 +18,9 @@ export class FooterComponent {
   }
   reservaciones(){
     window.open("https://wa.me/524442038808?text=Hola,%20quisiera%20reservar%20una%20mesa", '_blank')
+  }
+  eventos(){
+    window.open("https://wa.me/524442038808?text=Hola,%20quisiera%20información%20para%20realizar%20un%20evento%20privado%20en%20sus%20Instalaciones", '_blank')
   }
 
   changeCarta(){

@@ -1,5 +1,5 @@
 
-<section class="relative h-[80vh] bg-cover bg-center" style="background-image: url('img/botanas_hero.jpg');" id="hero">
+<section class="relative h-[60vh] bg-cover bg-center py-8" style="background-image: url('img/botanas_hero.jpg');" id="hero">
   <div class="absolute inset-0 bg-black/50"></div>
   <div class="relative z-10 container mx-auto px-6 h-full flex flex-col justify-center items-start text-white max-w-4xl">
 
@@ -15,10 +15,10 @@
     </p>
 
     <div class="mt-8 flex flex-col md:flex-row gap-3">
-      <button (click)="changeCarta()" [disabled] ="!is_carta" class="font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105" [ngClass]="is_carta? secondary_color : active_color">
+      <button (click)="changeCarta()" [disabled] ="!is_carta" class="cursor-pointer font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105" [ngClass]="is_carta? secondary_color : active_color">
         Del Botanero
       </button>
-      <button  (click)="changeCarta()" [disabled] ="is_carta" class="font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105" [ngClass]="is_carta? active_color : secondary_color">
+      <button  (click)="changeCarta()" [disabled] ="is_carta" class="cursor-pointer font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105" [ngClass]="is_carta? active_color : secondary_color">
         A la Carta
       </button>
     </div>
