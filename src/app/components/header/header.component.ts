@@ -1,11 +1,12 @@
 import { Component, inject, signal } from '@angular/core';
 import { CartaService } from '../../services/carta.service';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
@@ -13,9 +14,9 @@ export class HeaderComponent {
   cartaService = inject(CartaService)
 
   navItems = signal([
-    {name:'Botanas', link:'#botanas'}, 
-    {name:'Promociones', link:'#promociones'}, 
-    {name:'Nosotros', link:'#nosotros'}   
+    {name:'Botanas', link:'#botanas'},
+    {name:'Promociones', link:'#promociones'},
+    {name:'Nosotros', link:'#nosotros'}
   ]);
 
   get carta():boolean{
