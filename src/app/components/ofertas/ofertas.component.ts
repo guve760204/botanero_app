@@ -31,7 +31,7 @@ export class OfertasComponent {
       description: '2 cervezas de 210 ml. o 2 refrescos de 250 ml. + un platillo de botana a elegir.',
       price: 120,
       oldPrice: 150,
-      bgClass: 'from-blue-500/10 to-transparent'
+      bgClass: 'from-blue-200/10 to-transparent'
     },
     {
       tag: 'COMBO PERSONAL',
@@ -39,7 +39,7 @@ export class OfertasComponent {
       description: '2 cervezas de 355 ml. o 2 refrescos de 600 ml. + un platillo de botana a elegir.',
       price: 160,
       oldPrice: 200,
-      bgClass: 'from-blue-500/10 to-transparent'
+      bgClass: 'from-pink-500/10 to-transparent'
     },
     {
       tag: 'MÚSICA EN VIVO',
@@ -48,7 +48,7 @@ export class OfertasComponent {
       priceText: '',
       price: null,
       oldPrice: null,
-      bgClass: 'from-green-500/10 to-transparent'
+      bgClass: 'from-purple-500/10 to-transparent'
     },
     {
       tag: 'DOMINGOS DE ANTOJO',
@@ -57,7 +57,7 @@ export class OfertasComponent {
       priceText: '',
       price: null,
       oldPrice: null,
-      bgClass: 'from-green-500/10 to-transparent'
+      bgClass: 'from-lime-500/10 to-transparent'
     }
   ]);
 

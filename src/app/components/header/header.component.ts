@@ -1,12 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { CartaService } from '../../services/carta.service';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
