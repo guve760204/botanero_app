@@ -34,7 +34,38 @@
           </div>
         </div>
       }
-    </div>   
+    </div>
+
+    <h2 class="text-xl md:text-2xl font-bold text-gray-100 mt-8 p-3 mb-3 rounded-lg bg-pink-500" >Para los más pequeños (menú infantil)</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for(item of menu_infantil(); track item.name) {
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+          <img [src]="item.imageUrl" alt="{{ item.name }}" width="600" height="500" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <div class="flex flex-col justify-between items-start mb-2">
+              <h3 class="text-2xl font-bold text-gray-800">{{ item.name }}</h3>
+              <p class="text-2xl font-bold text-orange-500">${{ item.price }}</p>
+            </div>
+            <p class="text-gray-600">{{ item.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+    <h2 class="text-xl md:text-2xl font-bold text-gray-100 mt-8 p-3 mb-3 rounded-lg bg-green-500" >Bebidas (sin botana)</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for(item of menu_bebidas(); track item.name) {
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+          <img [src]="item.imageUrl" alt="{{ item.name }}" width="600" height="500" class="w-full h-64 object-cover">
+          <div class="p-6">
+            <div class="flex flex-col justify-between items-start mb-2">
+              <h3 class="text-2xl font-bold text-gray-800">{{ item.name }}</h3>
+              <p class="text-2xl font-bold text-orange-500">${{ item.price }}</p>
+            </div>
+            <p class="text-gray-600">{{ item.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
   </div>
 </section>
 

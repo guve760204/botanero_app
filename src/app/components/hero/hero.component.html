@@ -2,21 +2,24 @@
 <section class="relative h-[80vh] bg-cover bg-center" style="background-image: url('img/botanas_hero.jpg');">
   <div class="absolute inset-0 bg-black/50"></div>
   <div class="relative z-10 container mx-auto px-6 h-full flex flex-col justify-center items-start text-white max-w-4xl">
-   
+
     <h1 class="text-2xl md:text-7xl font-bold leading-tight">
       Tu pagas tus bebidas, <br />
       <span class="text-orange-500">La botana</span>
       corre por nuestra cuenta
     </h1>
     <p class="mt-6 text-lg max-w-lg">
-      Disfruta de las mejores botanas y un ambiente inigualable, diseñado para compartir con tu familia y amigos.
+       Pensando en tu comodidad te ofrecemos dos opciones, para que puedas elegir entre
+       <span class="text-orange-400 font-bold">las ofertas del botanero</span> o disfrutar de
+       nuestros <span class="text-orange-400 font-bold">platillos a la carta.</span>
     </p>
+
     <div class="mt-8 flex flex-col md:flex-row gap-3">
-      <button class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-        Ver Carta
+      <button (click)="changeCarta()" [disabled] ="!is_carta" class="font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105" [ngClass]="is_carta? secondary_color : active_color">
+        Del Botanero
       </button>
-      <button class="bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/50 text-white font-semibold px-8 py-3 rounded-lg transition-colors">
-        Nuestra Ubicación
+      <button  (click)="changeCarta()" [disabled] ="is_carta" class="font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105" [ngClass]="is_carta? active_color : secondary_color">
+        A la Carta
       </button>
     </div>
   </div>
