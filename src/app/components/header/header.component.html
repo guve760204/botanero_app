@@ -1,0 +1,24 @@
+
+<header class="bg-[#FAF7F2]/80 backdrop-blur-md sticky top-0 z-50">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center flex-col md:flex-row">
+    <div class="flex items-center space-x-2">
+      <img src="favicon.png" alt="Rincón de Nayarit Botanero Logo" width="32" height="32" class="rounded-md">
+      <span class="font-bold text-xl text-gray-800">Rincón de Nayarit Botanero</span>
+    </div>
+    <nav class="hidden md:flex items-center space-x-8">
+      @for(item of navItems(); track item) {
+        <a [href]="item.link" class="text-gray-700 hover:text-orange-500 transition-colors">{{ item.name }}</a>
+      }
+    </nav>
+    <div class="flex items-center space-x-4">
+      <button 
+        class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105"
+        (click)="getInfo()"
+        >
+        Más Info
+      </button>
+     
+    </div>
+  </div>
+</header>
+

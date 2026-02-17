@@ -1,0 +1,42 @@
+
+<section class="py-20" id="promociones">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-12">
+      <p class="text-orange-500 font-semibold text-sm tracking-wider">PROMOCIONES ESPECIALES</p>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mt-2">Ofertas de Temporada</h2>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      @for(oferta of ofertas(); track oferta.title) {
+        <div class="bg-[#1C1C1C] text-white rounded-3xl p-8 flex flex-col relative overflow-hidden bg-gradient-to-b {{oferta.bgClass}}">
+          <div class="mb-6">
+            <span class="bg-white/10 text-orange-400 text-xs font-bold px-3 py-1 rounded-full">{{ oferta.tag }}</span>
+          </div>
+          <h3 class="text-3xl font-bold mb-3">{{ oferta.title }}</h3>
+          <p class="text-gray-400 mb-8 flex-grow">{{ oferta.description }}</p>
+          <div class="flex items-end justify-between mb-8">
+            @if (oferta.price) {
+              <div class="flex items-baseline space-x-2">
+                <span class="text-5xl font-bold">${{ oferta.price }}</span>
+                @if (oferta.oldPrice) {
+                  <span class="text-2xl text-gray-500 line-through">${{ oferta.oldPrice }}</span>
+                }
+              </div>
+            } @else if(oferta.priceText) {
+              <span class="text-5xl font-bold">{{ oferta.priceText }}</span>
+            }
+          </div>
+        <!--   <button class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+            Aprovechar
+          </button> -->
+        </div>
+      }
+    </div>
+    <div class="text-center mt-12">
+      <a href="#" class="text-orange-500 font-semibold hover:text-orange-600 transition-colors">
+        Ver todas las promociones
+        <span class="ml-1">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
