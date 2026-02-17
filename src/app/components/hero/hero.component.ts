@@ -18,7 +18,7 @@ export class HeroComponent {
   }
 
   active_color:string = 'bg-orange-500 hover:bg-orange-600 text-white'
-  secondary_color:string = 'bg-white/20 hover:bg-white/30 disable'
+  secondary_color:string = 'bg-white/20 hover:bg-white/30 disable  cursor-pointer'
 
   changeCarta(){
     this.cartaService.togleCarta()
