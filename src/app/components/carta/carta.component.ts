@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
+import { DividerComponent } from "../divider/divider.component";
 
 @Component({
   selector: 'app-carta',
   standalone: true,
-  imports: [],
+  imports: [DividerComponent],
   templateUrl: './carta.component.html',
   styleUrl: './carta.component.scss'
 })

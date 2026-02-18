@@ -15,10 +15,10 @@
     </p>
 
     <div class="mt-8 flex flex-col md:flex-row gap-3">
-      <button (click)="changeCarta()" [disabled] ="!is_carta" class="cursor-pointer font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105" [ngClass]="is_carta? secondary_color : active_color">
+      <button role="button" (click)="changeCarta()" [disabled] ="!is_carta" class="cursor-pointer font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105" [ngClass]="is_carta? secondary_color : active_color">
         Del Botanero
       </button>
-      <button  (click)="changeCarta()" [disabled] ="is_carta" class="cursor-pointer font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105" [ngClass]="is_carta? active_color : secondary_color">
+      <button role="button" (click)="changeCarta()" [disabled] ="is_carta" class="cursor-pointer font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105" [ngClass]="is_carta? active_color : secondary_color">
         A la Carta
       </button>
     </div>
