@@ -10,11 +10,12 @@ import { HorarioComponent } from "./components/horario/horario.component";
 import { CartaComponent } from "./components/carta/carta.component";
 import { CommonModule } from '@angular/common';
 import { CartaService } from './services/carta.service';
+import { CarouselComponent } from "./components/carousel/carousel.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, HeaderComponent, HeroComponent, BotanasComponent, OfertasComponent, HistoriaComponent, TestimonialesComponent, FooterComponent, HorarioComponent, CartaComponent],
+  imports: [CommonModule, HeaderComponent, HeroComponent, BotanasComponent, OfertasComponent, HistoriaComponent, TestimonialesComponent, FooterComponent, HorarioComponent, CartaComponent, CarouselComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -22,7 +23,7 @@ export class AppComponent {
   cartaService = inject(CartaService)
 
   title = 'botanero_app';
-  
+
   get carta():boolean {
     return this.cartaService.carta()
   }

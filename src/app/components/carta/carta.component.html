@@ -5,7 +5,8 @@
        <h2 class="text-2xl md:text-5xl font-bold text-gray-900 mt-2">Platillos y bebidas a la carta</h2>
       <p class="text-orange-500 font-semibold text-sm tracking-wider">Disfruta de lo mejor de nuestra cocina con el toque especial de la casa</p>
     </div>
-    <h2 class="text-xl md:text-2xl font-bold text-gray-100 mt-2 p-3 mb-3 rounded-lg bg-blue-500" >Barra fría</h2>
+
+    <app-divider text="Barra fría" text_color="blue" line_color="blue" />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       @for(item of botanas_frias(); track item.name) {
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
@@ -22,7 +23,7 @@
     </div>
 
 
-    <h2 class="text-xl md:text-2xl font-bold text-gray-100 mt-8 p-3 mb-3 rounded-lg bg-orange-500" >Barra Caliente</h2>
+     <app-divider text="Barra caliente" text_color="orange" line_color="orange" />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       @for(item of botanas_calientes(); track item.name) {
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
@@ -38,7 +39,7 @@
       }
     </div>
 
-    <h2 class="text-xl md:text-2xl font-bold text-gray-100 mt-8 p-3 mb-3 rounded-lg bg-pink-500" >Para los más pequeños (menú infantil)</h2>
+     <app-divider text="Para los más pequeños (Menú infantil)" text_color="pink" line_color="pink" />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       @for(item of menu_infantil(); track item.name) {
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
@@ -53,7 +54,7 @@
         </div>
       }
     </div>
-    <h2 class="text-xl md:text-2xl font-bold text-gray-100 mt-8 p-3 mb-3 rounded-lg bg-green-500" >Bebidas (sin botana)</h2>
+     <app-divider text="Bebidas" text_color="green" line_color="green" />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       @for(item of menu_bebidas(); track item.name) {
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
