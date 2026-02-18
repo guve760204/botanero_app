@@ -14,7 +14,7 @@
        nuestros <span class="text-orange-400 font-bold">platillos a la carta.</span>
     </p>
 
-    <div class="mt-8 flex flex-col md:flex-row gap-3">
+    <div class="mt-8 flex flex-row md:flex-row gap-3">
       <button role="button" (click)="changeCarta()" [disabled] ="!is_carta" class="cursor-pointer font-semibold px-8 py-3 rounded-lg shadow-lg transition-transform transform hover:scale-105" [ngClass]="is_carta? secondary_color : active_color">
         Del Botanero
       </button>
