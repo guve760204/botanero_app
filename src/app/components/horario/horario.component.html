@@ -7,22 +7,19 @@
             <div class="flex justify-center text-2xl space-x-1  text-orange-400 ">
              NUESTROS HORARIOS
             </div>
-            <p class="text-orange-500  italic text-lg leading-relaxed"></p>
+            <div class="bg-green-500 font-bold rounded-sm py-2 px-4" *ngIf="status">¡Abierto! Estamos atendiendo.</div>
+            <div class="text-grey-100 font-bold bg-red-500 rounded-sm py-2 px-4" *ngIf="!status" >Cerrado. por favor verifique nuestros horarios</div>
           </div>
           <div class="flex flex-col gap-1 mt-6">
-            <div class="grid grid-cols-3 gap-4">
+            <div class="grid grid-cols-3 gap-1">
                 <div class="font-bold flex justify-center">Día</div>
                 <div class="font-bold flex justify-center">Apertura</div>
                 <div class="font-bold flex justify-center">Cierre</div>
-                <div class="flex justify-start">Viernes</div>
-                <div class="flex justify-end">02:00 pm.</div>
-                <div class="flex justify-end">09:00 pm.</div>
-                <div class="flex justify-start">Sábado</div>
-                <div class="flex justify-end">02:00 pm.</div>
-                <div class="flex justify-end">09:00 pm.</div>
-                <div class="flex justify-start">Domingo</div>
-                <div class="flex justify-end">11:00 am.</div>
-                <div class="flex justify-end">06:00 pm.</div>
+                @for (day of dias; track $index) {
+                  <div class="flex justify-start">{{day.name}}</div>
+                  <div class="flex justify-end">{{formatHourTo12Hour(day.apertura)}}</div>
+                  <div class="flex justify-end">{{formatHourTo12Hour(day.cierre)}}</div>
+                }
             </div>
           </div>
         </div>
