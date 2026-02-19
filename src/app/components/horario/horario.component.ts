@@ -26,12 +26,11 @@ export class HorarioComponent implements OnInit {
 
 
     verificarHorario() {
-    const ahora = new Date();
-    const today = ahora.getDay()
-    const hora = ahora.getHours();
-    const minutos = ahora.getMinutes();
-
-    const horario = this.dias.filter((dia)=>{
+      const ahora = new Date();
+      const today = ahora.getDay()
+      const hora = ahora.getHours();
+      const minutos = ahora.getMinutes();
+      const horario = this.dias.filter((dia)=>{
       return dia.id == today
     })
 
