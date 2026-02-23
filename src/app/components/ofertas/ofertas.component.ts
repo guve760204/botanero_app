@@ -10,6 +10,7 @@ import { Component, signal } from '@angular/core';
 export class OfertasComponent {
   ofertas = signal([
     {
+      img:'img/cubeta-210.jpg',
       tag: 'PARA EMPEZAR',
       title: '¡Cubeta de cuartitos!',
       description: '8 cervezas 210 ml. + 4 platillos de  Botana para compartir.',
@@ -18,6 +19,7 @@ export class OfertasComponent {
       bgClass: 'from-orange-500/10 to-transparent'
     },
     {
+      img:'',
       tag: 'COMO DIOS MANDA',
       title: 'Cubetazo XL',
       description: '8 cervezas 355 ml. + 4 platillos de  Botana para compartir.',
@@ -26,6 +28,7 @@ export class OfertasComponent {
       bgClass: 'from-blue-500/10 to-transparent'
     },
     {
+      img:'',
       tag: 'MINI COMBO PERSONAL',
       title: '2 Bebidas de cuartito + botana',
       description: '2 cervezas de 210 ml. o 2 refrescos de 250 ml. + un platillo de botana a elegir.',
@@ -34,6 +37,7 @@ export class OfertasComponent {
       bgClass: 'from-blue-200/10 to-transparent'
     },
     {
+      img:'',
       tag: 'COMBO PERSONAL',
       title: '2 Bebidas + botana',
       description: '2 cervezas de 355 ml. o 2 refrescos de 600 ml. + un platillo de botana a elegir.',
@@ -42,6 +46,7 @@ export class OfertasComponent {
       bgClass: 'from-pink-500/10 to-transparent'
     },
     {
+      img:'',
       tag: 'MÚSICA EN VIVO',
       title: 'TODOS LOS SÁBADOS',
       description: 'Lo mejor del talento local y más allá de nuestras fronteras.',
@@ -51,6 +56,7 @@ export class OfertasComponent {
       bgClass: 'from-purple-500/10 to-transparent'
     },
     {
+      img:'',
       tag: 'DOMINGOS DE ANTOJO',
       title: 'TODOS LOS DOMINGOS',
       description: 'Botana especial para variar, pregunta por el platillo del día.',
