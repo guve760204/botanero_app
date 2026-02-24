@@ -1,18 +1,20 @@
 
-<section class="py-8" id="promociones">
-  <div class="container mx-auto px-6">
+<section class="py-6" id="promociones">
+  <div class="container mx-auto px-8">
     <div class="text-center mb-12">
       <h2 class="text-xl md:text-2xl font-bold text-grey-900 mt-2">PROMOCIONES ESPECIALES DEL BOTANERO</h2>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gapx-8 gap-4 my-4">
+    <div class="grid grid-cols-1 md:grid-cols-2  gap-4 my-4">
        @for(oferta of ofertas(); track oferta.title) {
         <a href="#" class="flex flex-col items-center bg-[#1C1C1C] bg-gradient-to-b from-blue-500/10 to-transparent text-white p-6 border border-default rounded-md shadow-xs md:flex-row md:max-w-xl md:flex-row md:max-w-xl">
-          @if(oferta.img.length){
-            <img class="object-cover w-full rounded-base h-64 md:h-auto md:w-48 mb-4 md:mb-0" [src]="oferta.img" alt="">
-          }@else {
-            <img class="object-cover w-full rounded-base h-64 md:h-auto md:w-48 mb-4 md:mb-0" src="img/botanas_hero.jpg" alt="">
-          }
+          @if(oferta.is_image){
+            @if(oferta.img.length){
+              <img class="object-cover w-full rounded-base h-64 md:h-auto md:w-48 mb-4 md:mb-0" [src]="oferta.img" alt="">
+            }@else {
+              <img class="object-cover w-full rounded-base h-64 md:h-auto md:w-48 mb-4 md:mb-0" src="img/botanas_hero.jpg" alt="">
+            }
+          } 
           <div class="flex flex-col justify-between md:p-4 leading-normal">
             <div class="mb-6">
               <span class="bg-white/10 text-orange-400 text-xs font-bold px-3 py-1 rounded-full">{{ oferta.tag }}</span>
