@@ -5,15 +5,25 @@
       <img src="favicon.png" alt="Rincón de Nayarit Botanero Logo" width="32" height="32" class="rounded-md">
       <span class="font-bold text-xl text-gray-800">Rincón de Nayarit Botanero</span>
     </a>
-    <nav class="hidden md:flex items-center space-x-8">
+    <nav class="hidden md:flex items-center space-x-8" *ngIf="!carta; else menuCarta">
       @for(item of navItems(); track item) {
         <a [href]="'/'+item.link" class="text-gray-700 hover:text-orange-500 transition-colors">{{ item.name }}</a>
       }
+
     </nav>
+
+    <ng-template #menuCarta>
+      <nav class="hidden md:flex items-center space-x-8">
+        @for(item of carta_items(); track item) {
+          <a [href]="'/'+item.link" class="text-gray-700 hover:text-orange-500 transition-colors">{{ item.name }}</a>
+        }
+      </nav>
+    </ng-template>
+
     <div class="flex items-center space-x-4">
       <button
         *ngIf="carta; else noCarta"
-        class="cursor-pinter bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105"
+        class="cursor-pointer bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105"
         (click)="changeCarta()"
         >
         Del botanero

@@ -18,6 +18,13 @@ export class HeaderComponent {
     {name:'Nosotros', link:'#nosotros'}
   ]);
 
+  carta_items = signal([
+    {name:'Barra fría', link:'#fria'},
+    {name:'Barra caliente', link:'#caliente'},
+    {name:'Menú Infantil', link:'#infantil'},
+    {name:'Bebidas', link:'#bebidas'}
+  ]);
+
   get carta():boolean{
     return this.cartaService.carta()
   }

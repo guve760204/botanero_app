@@ -6,7 +6,7 @@
       <p class="text-orange-500 font-semibold text-sm tracking-wider">Disfruta de lo mejor de nuestra cocina con el toque especial de la casa</p>
     </div>
 
-    <app-divider text="Barra fría" class="text-blue-500" text_color="blue" line_color="blue" />
+    <app-divider text="Barra fría" class="text-blue-500" text_color="blue" line_color="blue" id="fria" />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       @for(item of botanas_frias(); track item.name) {
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
@@ -23,7 +23,7 @@
     </div>
 
 
-     <app-divider text="Barra caliente" text_color="orange" line_color="orange" />
+     <app-divider text="Barra caliente" text_color="orange" line_color="orange" id="caliente" />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       @for(item of botanas_calientes(); track item.name) {
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
@@ -39,7 +39,7 @@
       }
     </div>
 
-     <app-divider text="Para los más pequeños (Menú infantil)" class="text-pink-400" text_color="pink" line_color="pink" />
+     <app-divider text="Para los más pequeños (Menú infantil)" class="text-pink-400" text_color="pink" line_color="pink"  id="infantil"/>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       @for(item of menu_infantil(); track item.name) {
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
@@ -54,7 +54,7 @@
         </div>
       }
     </div>
-     <app-divider text="Bebidas" text_color="green" class="text-green-400" line_color="green" />
+     <app-divider text="Bebidas" text_color="green" class="text-green-400" line_color="green" id="bebidas" />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       @for(item of menu_bebidas(); track item.name) {
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
